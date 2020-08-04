@@ -44,9 +44,39 @@
 }
 
 @font-face {
-	font-family: "font";
-	src: url(../fonts/font.woff);
-	src: url(../fonts/font.woff2);
+	font-family: "cuprum";
+	src: url(../fonts/cuprum.woff);
+	src: url(../fonts/cuprum.woff2);
+}
+
+@font-face {
+	font-family: "cuprumbold";
+	src: url(../fonts/cuprumbold.woff);
+	src: url(../fonts/cuprumbold.woff2);
+}
+
+@font-face {
+	font-family: "cuprumitalic";
+	src: url(../fonts/cuprumitalic.woff);
+	src: url(../fonts/cuprumitalic.woff2);
+}
+
+@font-face {
+	font-family: "cuprumbolditalic";
+	src: url(../fonts/cuprumbolditalic.woff);
+	src: url(../fonts/cuprumbolditalic.woff2);
+}
+
+@font-face {
+	font-family: "ptsans";
+	src: url(../fonts/ptsans.woff);
+	src: url(../fonts/ptsans.woff2);
+}
+
+@font-face {
+	font-family: "ptsansbold";
+	src: url(../fonts/ptsansbold.woff);
+	src: url(../fonts/ptsansbold.woff2);
 }
 
 html {
@@ -61,10 +91,10 @@ body {
 	min-width: 1200px;
 	margin: 0;
 	padding: 0;
-	font-family: "Font", Arial, sans-serif;
+	font-family: "cuprum", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 26px;
-	color: #000000;
+	color: var(--color-bg-main);
 }
 
 a {
