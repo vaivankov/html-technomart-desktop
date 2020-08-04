@@ -1,9 +1,46 @@
 ﻿:root {
-  --color-black: #000000;
-  --color-white: #ffffff;
- 
-  --color-white-opacity-30: #ffffff30;
-  --color-black-opacity-30: #00000030;
+	--color-black: #000000;
+	--color-white: #ffffff;
+	--color-white-opacity-30:#ffffff30;
+	--color-black-opacity-30:#00000030;
+	--color-bg-header: #293449;
+	--color-bg-header-hover: #212A3A;
+	--color-bg-header-active: #161D29;
+	--color-bg-main: #F1F5F7;
+	--color-bg-gray: #F9F5F0;
+	--color-bg-navigation: #32425C;
+	--color-bg-navigation-hover: #293449;
+	--color-logo: #EE3643;
+	--color-logo-hover: #CA2C37;
+	--color-logo-active: #BA2732;
+	--color-logo-border: #B52933;
+	--color-logo-border-hover: #9A212A;
+	--color-logo-border-active: #8E1E26;
+	--color-text-dark-white: #E0E2E5;
+	--color-text-red: #EE3643;
+	--color-text-gray: #BABBBD;
+	--color-text-gray-active: #CACACA;
+	--color-icon: #6A7180;
+	--color-icon-hover: #FFFFFF;
+	--color-icon-active: #8B8E94;
+	--color-icon-red: #EE3643;
+	--color-button-green: #63A63E;
+	--color-button-green-border: #367315;
+	--color-button-green-hover: #5FBB2D;
+	--color-button-green-active: #518534;
+	--color-button-green-text-active: #B6C8AE;
+	--color-button-gray: #E5E5E5;
+	--color-button-gray-hover: #CCCCCC;
+	--color-button-gray-active: #B2B2B2;
+	--color-button-red: #EE3643;
+	--color-button-red-hover: #CA2C37;
+	--color-button-red-active: #BA2732;
+	--color-link-gold: #FFD180;
+	--color-link-red: #EE3643;
+	--color-card-gold: #FFBF47;
+	--color-card-aqua: #3BBCE3;
+	--color-card-pink: #DC91D8;
+	--color-card-lime: #8ED78F;
 }
 
 @font-face {
@@ -16,9 +53,7 @@ html {
 	box-sizing: border-box;
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
 	box-sizing: inherit;
 }
 
@@ -26,7 +61,6 @@ body {
 	min-width: 1200px;
 	margin: 0;
 	padding: 0;
-
 	font-family: "Font", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 26px;
@@ -45,15 +79,12 @@ img {
 
 .visually-hidden:not(:focus):not(:active) {
 	position: absolute;
-
 	width: 1px;
 	height: 1px;
 	margin: -1px;
 	border: 0;
 	padding: 0;
-
 	white-space: nowrap;
-
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
 	overflow: hidden;
