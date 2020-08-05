@@ -121,7 +121,7 @@ img {
 	white-space: nowrap;
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
-	overflow: hidden;
+	overfbottom: hidden;
 }
 
 .container {
@@ -191,13 +191,41 @@ img {
 	background-color: var(--color-button-green-active);
 }
 
+.link--bookmark,
+.link--basket {
+	display: flex;
+	align-items: center;
+}
+
+.link--bookmark::before,
+.link--basket::before {
+	display: inline-block;
+	margin-right: 10px;
+	width: 17px;
+	height: 17px;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+
+	content: '';
+}
+
+.link--basket::before {
+	background-image: url("../svg/cart.svg");
+}
+
+.link--bookmark::before {
+	background-image: url("../svg/bookmark.svg");
+}
+
 .link__image {
 	margin-right: 5px;
 }
 
 .link__text {
 }
-.low-header {
+.bottom-header {
 }
 .popular-manufacturers {
 }
