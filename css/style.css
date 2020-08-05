@@ -20,6 +20,7 @@
 	--color-text-red: #EE3643;
 	--color-text-gray: #BABBBD;
 	--color-text-gray-active: #CACACA;
+	--color-text-blue: #293449;
 	--color-icon: #6A7180;
 	--color-icon-hover: #FFFFFF;
 	--color-icon-active: #8B8E94;
@@ -94,7 +95,8 @@ body {
 	font-family: "cuprum", Arial, sans-serif;
 	font-size: 16px;
 	line-height: 26px;
-	color: var(--color-bg-main);
+	background-color: var(--color-bg-main);
+	color: var(--color-text-blue);
 }
 
 a {
