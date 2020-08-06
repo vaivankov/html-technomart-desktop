@@ -116,8 +116,87 @@
 
     <h2 class="">Основной контент</h2>
 
-    <section class="goods">
+    <section class="container goods">
+
       <h3 class="">Основные услуги</h3>
+
+      <div class="goods__row">
+
+        <article class="article-good article-good--materials">
+          <div class="article-good__title">Материалы</div>
+          <button class="article-good__button button">На любой вкус</button>
+        </article>
+
+        <article class="article-good article-good--instruments">
+          <div class="article-good__title">Инструмент</div>
+          <button class="article-good__button button">На все случаи жизни</button>
+        </article>
+
+        <article class="article-good article-good--machines">
+          <div class="article-good__title">Техника</div>
+          <button class="article-good__button button">Для стройки</button>
+        </article>
+
+      </div>
+
+      <div class="goods__row">
+
+        <div class="slider">
+
+          <div class="slider__image-wrapper">
+            <img class="slider__image" width="620" height="266" src="img/slider-image-1.png" alt="Мужчина, сверлящий стену">
+          </div>
+
+          <div class="slider__title">Дрели</div>
+          <div class="slider__title-explanation">Соседям на радость!</div>
+
+          <div class="slider__row">
+            <a class="button button--red" href="catalog.html">Открыть каталог</a>
+
+            <ul class="slider__controls">
+              <li class="slider__slide-wrapper">
+                <label>
+                  <span class="visually-hidden">Слайд 1</span>
+                  <input class="visually-hidden goods-slider" name="goods-slider" type="radio"
+                    data-url="img/slider-image-1.png" data-title="Дрели"
+                    data-title-explanation="Соседям на радость!"
+                    data-img-alt="Мужчина, сверлящий стену дрелью" onclick="changeSlide()" checked>
+                  </input>
+                  <span class="button button--red"></span>
+                </label>
+              </li>
+              <li class="slider__slide-wrapper">
+                <label>
+                  <span class="visually-hidden">Слайд 2</span>
+                  <input class="visually-hidden goods-slider" name="goods-slider" type="radio"
+                    data-url="img/slider-image-2.png" data-title="Дрели"
+                    data-title-explanation="Соседям на радость!"
+                    data-img-alt="Мужчина, сверлящий стену перфоратором" onclick="changeSlide()" checked>
+                  </input>
+                  <span class="button button--red"></span>
+                </label>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+
+        <div class="article-column">
+
+          <article class="article-good article-good--sale">
+            <div class="article-good__title">Скидки 50%</div>
+            <button class="article-good__button button">На 350 товаров</button>
+          </article>
+
+          <article class="article-good article-good--delivery">
+            <div class="article-good__title">Доставка</div>
+            <button class="article-good__button button">Бесплатно</button>
+          </article>
+
+        </div>
+
+      </div>
+
     </section>
 
     <section class="popular-products">

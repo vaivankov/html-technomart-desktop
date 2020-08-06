@@ -385,7 +385,7 @@ img {
 }
 
 .site-navigation-wrapper {
-	height: 64px;
+	height: 60px;
 	padding: 0 20px;
 	margin-top: 40px;
 
@@ -393,6 +393,12 @@ img {
 }
 
 .site-navigation__item:hover {
+	background-color: var(--color-bg-navigation-hover);
+}
+
+.site-navigation__item:active a {
+  color: var(--color-white-opacity-30);
+
 	background-color: var(--color-bg-navigation-hover);
 }
 
