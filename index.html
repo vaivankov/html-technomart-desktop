@@ -12,12 +12,12 @@
 <body>
 
 
-  <h1 class="">Сайт магазина электротехники ТЕХНОМАРТ</h1>
+  <h1 class="visually-hidden">Сайт магазина электротехники ТЕХНОМАРТ</h1>
 
 
   <header class="site-header">
 
-    <h2 class="">Шапка сайта</h2>
+    <h2 class="visually-hidden">Шапка сайта</h2>
 
     <div class="top-header">
 
@@ -114,22 +114,22 @@
 
   <main>
 
-    <h2 class="">Основной контент</h2>
+    <h2 class="visually-hidden">Основной контент</h2>
 
     <section class="container goods">
 
-      <h3 class="">Основные услуги</h3>
+      <h3 class="visually-hidden">Основные услуги</h3>
 
       <div class="goods__row">
 
-        <article class="article-good article-good--materials">
+        <article class="article-good article-good--materials label-new">
           <div class="article-good__title">Материалы</div>
           <button class="article-good__button button">На любой вкус</button>
         </article>
 
         <article class="article-good article-good--instruments">
           <div class="article-good__title">Инструмент</div>
-          <button class="article-good__button button">На все случаи жизни</button>
+          <button class="article-good__button button">На все случаи</button>
         </article>
 
         <article class="article-good article-good--machines">
@@ -144,39 +144,45 @@
         <div class="slider">
 
           <div class="slider__image-wrapper">
-            <img class="slider__image" width="620" height="266" src="img/slider-image-1.png" alt="Мужчина, сверлящий стену">
+            <img class="slider__image" width="620" height="266" src="img/slider-image-1.png"
+              alt="Мужчина, сверлящий стену">
           </div>
 
-          <div class="slider__title">Дрели</div>
-          <div class="slider__title-explanation">Соседям на радость!</div>
+          <div class="slider__content">
 
-          <div class="slider__row">
-            <a class="button button--red" href="catalog.html">Открыть каталог</a>
+            <div>
+              <div class="slider__title">Дрели</div>
+              <div class="slider__title-explanation">Соседям на радость!</div>
+            </div>
 
-            <ul class="slider__controls">
-              <li class="slider__slide-wrapper">
-                <label>
-                  <span class="visually-hidden">Слайд 1</span>
-                  <input class="visually-hidden goods-slider" name="goods-slider" type="radio"
-                    data-url="img/slider-image-1.png" data-title="Дрели"
-                    data-title-explanation="Соседям на радость!"
-                    data-img-alt="Мужчина, сверлящий стену дрелью" onclick="changeSlide()" checked>
-                  </input>
-                  <span class="button button--red"></span>
-                </label>
-              </li>
-              <li class="slider__slide-wrapper">
-                <label>
-                  <span class="visually-hidden">Слайд 2</span>
-                  <input class="visually-hidden goods-slider" name="goods-slider" type="radio"
-                    data-url="img/slider-image-2.png" data-title="Дрели"
-                    data-title-explanation="Соседям на радость!"
-                    data-img-alt="Мужчина, сверлящий стену перфоратором" onclick="changeSlide()" checked>
-                  </input>
-                  <span class="button button--red"></span>
-                </label>
-              </li>
-            </ul>
+            <div class="slider__row">
+              <a class="slider__button button button--red" href="catalog.html">Открыть каталог</a>
+
+              <ul class="slider__controls">
+
+                <li class="slider__slide-wrapper">
+                  <label>
+                    <span class="visually-hidden">Слайд 1</span>
+                    <input class="goods-radio" name="goods-slider" type="radio"
+                      data-url="img/slider-image-1.png" data-title="Дрели" data-title-explanation="Соседям на радость!"
+                      data-img-alt="Мужчина, сверлящий стену дрелью" onclick="changeSlide()" checked>
+                    </input>
+                  </label>
+                </li>
+
+                <li class="slider__slide-wrapper">
+                  <label>
+                    <span class="visually-hidden">Слайд 2</span>
+                    <input class="goods-radio" name="goods-slider" type="radio"
+                      data-url="img/slider-image-2.png" data-title="Перфораторы" data-title-explanation="Настоящие мужские игрушки"
+                      data-img-alt="Мужчина, сверлящий стену перфоратором" onclick="changeSlide()">
+                    </input>
+                  </label>
+                </li>
+
+              </ul>
+
+            </div>
 
           </div>
         </div>
@@ -200,29 +206,29 @@
     </section>
 
     <section class="popular-products">
-      <h3 class="">Популярные товары</h3>
+      <h3 class="visually-hidden">Популярные товары</h3>
     </section>
 
     <section class="popular-manufacturers">
-      <h3 class="">Популярные производители</h3>
+      <h3 class="visually-hidden">Популярные производители</h3>
     </section>
 
     <section class="services">
-      <h3 class="">Дополнительные услуги</h3>
+      <h3 class="visually-hidden">Дополнительные услуги</h3>
     </section>
 
     <section class="about-company">
-      <h3 class="">О компании</h3>
+      <h3 class="visually-hidden">О компании</h3>
     </section>
 
     <section class="contacts">
-      <h3 class="">Контакты</h3>
+      <h3 class="visually-hidden">Контакты</h3>
     </section>
 
   </main>
 
   <footer class="site-footer">
-    <h2 class="">Подвал сайта</h2>
+    <h2 class="visually-hidden">Подвал сайта</h2>
   </footer>
 
   <script src="js/variables.js"></script>
