@@ -1,4 +1,4 @@
-﻿:root {
+:root {
 	--color-black: #000000;
 	--color-white: #ffffff;
 	--color-white-opacity-30: #ffffff30;
@@ -100,8 +100,6 @@ body {
 	font-size: 17px;
 	line-height: 26px;
 	color: var(--color-text-blue);
-
-	background-color: var(--color-bg-main);
 }
 
 a {
@@ -289,7 +287,7 @@ img {
 
 .bottom-header {
 	padding: 40px 0 60px 0;
-	background-color: var(--color-bg-header-gray);
+	background-color: var(--color-bg-gray);
 }
 
 .user-navigation {
@@ -623,9 +621,6 @@ img {
 	background-color: var(--color-article-gold);
 }
 
-.popular-products {
-}
-
 .semi-header {
 	padding: 0 30px;
 	display: flex;
@@ -634,7 +629,7 @@ img {
 	height: 80px;
 
 	border-radius: 5px;
-	background-color: var(--color-bg-header-gray);
+	background-color: var(--color-bg-gray);
 }
 
 .semi-header__title {
@@ -651,16 +646,76 @@ img {
 }
 
 .good-cards-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 20px;
 }
+
 .good-card {
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 0 20px 0;
+	width: 220px;
+	height: 320px;
+
+	text-align: center;
+
+	border: 2px solid var(--color-bg-header-gray);
+	overflow: hidden;
 }
+
 .good-card__figure {
+	margin: 0;
+	padding: 0;
 }
-.good-card__image {
-}
+
 .good-card__figure-caption {
+	margin: 0 auto;
+	width: 80%;
+
+	font-size: 18px;
+	color: var(--color-black);
+	font-family: "ptsansbold";
 }
+
 .old-price {
+	font-size: 18px;
+	font-family: "ptsansbold";
+	color: var(--color-text-gray);
+	text-decoration: line-through;
 }
+
+.good-card__button-wrapper {
+	display: flex;
+	margin-top: 5px;
+}
+
 .good-card__button {
+	position: relative;
+
+	height: 40px;
+	width: 120px;
+
+	font-size: 18px;
+	font-family: "ptsansbold";
+
+	border-top-right-radius: initial;
+	border-bottom-right-radius: initial;
+}
+
+.good-card__button-text {
+	margin-left: 10px;
+}
+
+.good-card__button:hover + .good-card__button-arrow {
+	fill: var(--color-button-red-hover);
+}
+
+.good-card__button:active + .good-card__button-arrow {
+	fill: var(--color-button-red-active);
 }
