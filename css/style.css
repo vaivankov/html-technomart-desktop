@@ -720,3 +720,27 @@ img {
 .good-card__button:active + .good-card__button-arrow {
 	fill: var(--color-button-red-active);
 }
+
+.popular-manufacturers {
+	margin-bottom: 80px;
+}
+
+.manufacturer-cards-wrapper {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.manufacturer-card {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	width: 220px;
+	height: 150px;
+
+	text-align: center;
+
+	border: 2px solid var(--color-bg-header-gray);
+	overflow: hidden;
+}
