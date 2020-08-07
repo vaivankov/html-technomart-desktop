@@ -124,17 +124,17 @@
 
         <article class="article-good article-good--materials label-new">
           <div class="article-good__title">Материалы</div>
-          <button class="article-good__button button">На любой вкус</button>
+          <button class="article-good__button button" type="button">На любой вкус</button>
         </article>
 
         <article class="article-good article-good--instruments">
           <div class="article-good__title">Инструмент</div>
-          <button class="article-good__button button">На все случаи</button>
+          <button class="article-good__button button" type="button">На все случаи</button>
         </article>
 
         <article class="article-good article-good--machines">
           <div class="article-good__title">Техника</div>
-          <button class="article-good__button button">Для стройки</button>
+          <button class="article-good__button button" type="button">Для стройки</button>
         </article>
 
       </div>
@@ -163,8 +163,8 @@
                 <li class="slider__slide-wrapper">
                   <label>
                     <span class="visually-hidden">Слайд 1</span>
-                    <input class="slider-radio" name="goods-slider" type="radio"
-                      data-url="img/slider-image-1.png" data-title="Дрели" data-title-explanation="Соседям на радость!"
+                    <input class="slider-radio" name="goods-slider" type="radio" data-url="img/slider-image-1.png"
+                      data-title="Дрели" data-title-explanation="Соседям на радость!"
                       data-img-alt="Мужчина, сверлящий стену дрелью" onclick="changeSlide()" checked>
                     </input>
                   </label>
@@ -173,8 +173,8 @@
                 <li class="slider__slide-wrapper">
                   <label>
                     <span class="visually-hidden">Слайд 2</span>
-                    <input class="slider-radio" name="goods-slider" type="radio"
-                      data-url="img/slider-image-2.png" data-title="Перфораторы" data-title-explanation="Настоящие мужские игрушки"
+                    <input class="slider-radio" name="goods-slider" type="radio" data-url="img/slider-image-2.png"
+                      data-title="Перфораторы" data-title-explanation="Настоящие мужские игрушки"
                       data-img-alt="Мужчина, сверлящий стену перфоратором" onclick="changeSlide()">
                     </input>
                   </label>
@@ -191,12 +191,12 @@
 
           <article class="article-good article-good--sale">
             <div class="article-good__title">Скидки 50%</div>
-            <button class="article-good__button button">На 350 товаров</button>
+            <button class="article-good__button button" type="button">На 350 товаров</button>
           </article>
 
           <article class="article-good article-good--delivery">
             <div class="article-good__title">Доставка</div>
-            <button class="article-good__button button">Бесплатно</button>
+            <button class="article-good__button button" type="button">Бесплатно</button>
           </article>
 
         </div>
@@ -206,7 +206,51 @@
     </section>
 
     <section class="popular-products">
-      <h3 class="visually-hidden">Популярные товары</h3>
+
+      <div class="semi-header">
+        <h3 class="semi-header__title">Популярные товары:</h3>
+        <a class="semi-header__button button button--red" href="catalog.html">Все популярные товары</a>
+      </div>
+
+      <div class="good-cards-wrapper">
+
+        <div class="good-card">
+          <figure class="good-card__figure">
+            <img width="218" height="170" src="img/Perforator_1.png" alt="Фотография перфоратора" class="good-card__image">
+            <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 9000</figcaption>
+          </figure>
+          <div class="old-price">32500 Р.</div>
+          <a href="#" class="good-card__button button button--red">25500 Р.</a>
+        </div>
+
+        <div class="good-card">
+          <figure class="good-card__figure">
+            <img width="218" height="170" src="img/Perforator_3.png" alt="Фотография перфоратора" class="good-card__image">
+            <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 3000</figcaption>
+          </figure>
+          <div class="old-price">22500 Р.</div>
+          <a href="#" class="good-card__button button button--red">15500 Р.</a>
+        </div>
+
+        <div class="good-card">
+          <figure class="good-card__figure">
+            <img width="218" height="170" src="img/Perforator_2.png" alt="Фотография перфоратора" class="good-card__image">
+            <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 6000</figcaption>
+          </figure>
+          <div class="old-price">30500 Р.</div>
+          <a href="#" class="good-card__button button button--red">25500 Р.</a>
+        </div>
+
+        <div class="good-card label-new">
+          <figure class="good-card__figure">
+            <img width="218" height="170" src="img/Perforator_3.png" alt="Фотография перфоратора" class="good-card__image">
+            <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 2000</figcaption>
+          </figure>
+          <a href="#" class="good-card__button button button--red">12500 Р.</a>
+        </div>
+      </div>
+
+
     </section>
 
     <section class="popular-manufacturers">
