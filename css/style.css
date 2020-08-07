@@ -124,7 +124,7 @@ img {
 	white-space: nowrap;
 	clip-path: inset(100%);
 	clip: rect(0 0 0 0);
-	overfbottom: hidden;
+	overflow: hidden;
 }
 
 .container {
@@ -426,7 +426,7 @@ img {
 }
 
 .goods {
-	padding: 60px 0;
+	padding: 60px 0 40px 0;
 }
 
 .goods__row {
@@ -554,9 +554,6 @@ img {
 	display: flex;
 }
 
-.slider__image {
-}
-
 .slider__title {
 	font-size: 36px;
 	font-family: "cuprumbold";
@@ -606,12 +603,6 @@ img {
 	width: 20px;
 }
 
-.goods-radio {
-}
-
-.article-column {
-}
-
 .article-column .article-good {
 	margin-right: 0;
 }
@@ -630,4 +621,46 @@ img {
 	background-position: right 30px center;
 	background-size: 80px;
 	background-color: var(--color-article-gold);
+}
+
+.popular-products {
+}
+
+.semi-header {
+	padding: 0 30px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
+
+	border-radius: 5px;
+	background-color: var(--color-bg-header-gray);
+}
+
+.semi-header__title {
+	margin: 0;
+	
+	font-size: 30px;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+
+.semi-header__button {
+	height: 35px;
+	width: 250px;
+}
+
+.good-cards-wrapper {
+}
+.good-card {
+}
+.good-card__figure {
+}
+.good-card__image {
+}
+.good-card__figure-caption {
+}
+.old-price {
+}
+.good-card__button {
 }
