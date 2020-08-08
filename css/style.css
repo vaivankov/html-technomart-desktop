@@ -962,3 +962,133 @@ img {
 	width: 100%;
 	height: 40px;
 }
+
+.top-footer {
+	height: 195px;
+
+	background-color: var(--color-bg-navigation);
+}
+
+.top-footer__row-top {
+	display: flex;
+	justify-content: space-between;
+	height: 65px;
+}
+
+.top-footer__row-bottom {
+	display: flex;
+	justify-content: space-between;
+	height: 55px;
+}
+
+.top-footer__logo {
+	width: 220px;
+}
+
+.top-footer__logo .link__text {
+	font-size: 30px;
+}
+
+.top-footer__address {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	color: var(--color-white);
+}
+
+.top-footer__phone a {
+	color: var(--color-white);
+}
+
+.footer-navigation {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 540px;
+
+	list-style: none;
+}
+
+.footer-navigation .link:active {
+	opacity: 0.3;
+}
+
+.top-footer__row-bottom .footer-navigation {
+	width: 520px;
+}
+
+.top-footer__row-bottom .footer-navigation .link {
+	color: var(--color-link-gold);
+}
+
+.top-footer__row-bottom .footer-navigation .link:hover {
+	border-bottom: 2px solid var(--color-link-gold);
+}
+
+.footer-navigation .link:hover {
+	border-bottom: 2px solid var(--color-white);
+}
+
+.bottom-footer {
+	background-color: var(--color-bg-header);
+
+	height: 120px;
+}
+
+.bottom-footer__content {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.bottom-footer__copyright {
+	color: var(--color-white);
+}
+
+.bottom-footer__social {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin: 0;
+	padding: 0;
+	width: 160px;
+
+	list-style: none;
+}
+
+.bottom-footer__social-item a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 45px;
+	width: 45px;
+	border-radius: 50%;
+
+	background-color: var(--color-bg-header-hover);
+}
+
+.bottom-footer__social-item a:active,
+.bottom-footer__social-item a:hover {
+	background-color: var(--color-button-red);
+}
+
+.bottom-footer__author {
+	color: var(--color-white);
+}
+
+.bottom-footer__author-link {
+	color: var(--color-link-gold);
+}
+
+.bottom-footer__author-link:hover {
+	border-bottom: 2px solid var(--color-link-gold);
+}
+
+.bottom-footer__author-link:active {
+	color: var(--color-link-red);
+
+	border-bottom: none;
+}
