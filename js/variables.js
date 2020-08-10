@@ -9,3 +9,6 @@ window.serviceBookmarkImage = document.querySelector('.services__bookmark-image'
 window.serviceBookmarkTitle = document.querySelector('.services__bookmark-title');
 window.serviceBookmarkTitleExplanation = document.querySelector('.services__bookmark-title-explanation');
 window.serviceRadioAll = document.querySelectorAll('.services__bookmark-input');
+
+window.writeUsClose = document.querySelector('.write-us__close');
+window.writeUsShow = document.querySelector('.contacts__button');

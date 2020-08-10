@@ -1232,7 +1232,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	height: 600px;
+	min-height: 600px;
 	width: 960px;
 
 	background-color: var(--color-white);
@@ -1333,3 +1333,6 @@ img {
 	background-color: var(--color-bg-gray);
 }
 
+.show {
+	display: flex;
+}
