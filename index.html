@@ -608,6 +608,52 @@
 
   </footer>
 
+  <div class="modal write-us">
+
+    <div class="write-us__line write-us__line--header">
+      <span class="write-us__title">Напишите нам</span>
+      <button class="write-us__close button" data-window=".write-us">
+        <div class="image-wrapper">
+          <img width="21" height="21" src="svg/close-cross.svg" alt="Иконка закрытия">
+        </div>
+      </button>
+    </div>
+
+    <form class="write-us__form" action="https://echo.htmlacademy.ru" method="POST">
+
+      <div class="write-us__line write-us__line--contacts">
+
+        <div class="write-us__cell">
+          <label class="input-title" for="write-us__name">Ваше имя:</label>
+          <input class="input" placeholder="Имя и фамилия" type="name" name="name" id="write-us__name" required>
+        </div>
+
+        <div class="write-us__cell">
+          <label class="input-title" for="write-us__email">Ваш e-mail:</label>
+          <input class="input" placeholder="yourmail@mail.com" type="email" name="email" id="write-us__email" required>
+        </div>
+
+      </div>
+
+      <div class="write-us__line write-us__line--message">
+
+        <div class="write-us__cell">
+          <label class="input-title" for="write-us__textarea">Тест письма:</label>
+          <textarea class="input write-us__textarea" placeholder="В свободной форме" type="text" name="text"
+            id="write-us__textarea" cols="30" rows="20" required></textarea>
+        </div>
+
+      </div>
+
+      <div class="write-us__line write-us__line--button">
+        <button class="write-us__button button button--red" type="submit">Отправить</button>
+      </div>
+
+      </for>
+
+  </div>
+
+
   <script src="js/variables.js"></script>
   <script src="js/func__changeSlide.js"></script>
   <script src="js/func__changeService.js"></script>
