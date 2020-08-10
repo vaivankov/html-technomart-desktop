@@ -423,7 +423,7 @@ img {
 .account-link--login:hover,
 .account-link--login:hover .account-link__text::before {
 	color: var(--color-text-red);
-	
+
 	opacity: 1;
 }
 
@@ -1547,4 +1547,155 @@ img {
 
 .show {
 	display: flex;
+}
+
+.section-navigation {
+	display: flex;
+	align-items: center;
+	margin: 20px 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.section-navigation__item {
+	font-size: 14px;
+	line-height: 14px;
+	font-family: "ptsans";
+	text-transform: uppercase;
+	color: var(--color-text-blue);
+}
+
+.section-navigation__item:not(:last-child)::after {
+	display: inline-block;
+	margin: 0 15px;
+	width: 8px;
+	height: 12px;
+
+	background-image: url("../svg/icon-right-small.svg");
+	background-position: 0 0;
+	background-repeat: no-repeat;
+
+	content: '';
+}
+
+.section-navigation__link--home {
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+
+	background-image: url("../svg/home.svg");
+	background-repeat: no-repeat;
+	background-position: 0 0;
+}
+
+.section-navigation-title {
+	display: flex;
+	padding: 20px;
+	margin: 20px 0;
+
+	font-size: 24px;
+	color: var(--color-text-blue);
+	text-transform: uppercase;
+
+	background-color: var(--color-bg-gray);
+}
+
+.catalog {
+}
+.sort-wrapper {
+}
+.sort {
+}
+.sort__title {
+}
+.sort__form {
+}
+.fieldset {
+}
+.fieldset--price {
+}
+.fieldset__title {
+}
+.price-slider {
+}
+.slider-track {
+}
+.price-slider-thumb {
+}
+.price-slider-min {
+}
+.price-slider-max {
+}
+.price-input-wrapper {
+}
+.price-input {
+}
+.price-input__label {
+}
+.button--gray {
+}
+.button--input {
+}
+.price-input-min {
+}
+.price-input-max {
+}
+.fieldset--manufacturer {
+}
+.fieldset__list {
+}
+.fieldset__list-item {
+}
+.checkbox-label {
+}
+.checkbox-input {
+}
+.checkbox-indicator {
+}
+.fieldset--power-supply {
+}
+.radio-label {
+}
+.radio-input {
+}
+.radio-indicator {
+}
+.sort__submit-btn {
+}
+.results-wrapper {
+}
+.results {
+}
+.results__header {
+}
+.results__title {
+}
+.results__buttons {
+}
+.sort-buttons {
+}
+.sort-by {
+}
+.sort-direction {
+}
+.arrow {
+}
+.arrow-input {
+}
+.results__body {
+}
+.results__controls {
+}
+.results__button {
+}
+.button--current {
+}
+.results__button--next {
+}
+.catalog-explanation {
+}
+.catalog-explanation__title {
+}
+.catalog-explanation__text {
 }
