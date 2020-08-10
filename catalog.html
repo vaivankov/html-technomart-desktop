@@ -116,16 +116,487 @@
 
     <h2 class="visually-hidden">Основной контент</h2>
 
-    <section class="section-navigation">
+    <section class="container section-navigation">
+
       <h3 class="visually-hidden">Навигация по секциям</h3>
+
+      <ul class="section-navigation">
+        <li class="section-navigation__item">
+          <a href="index.html" class="section-navigation__link"><img width="21" height="21" src="svg/home.svg" alt="Иконка домика"></a>
+        </li>
+        <li class="section-navigation__item">
+          <a href="catalog.html" class="section-navigation__link">Каталог</a>
+        </li>
+        <li class="section-navigation__item">
+          <a href="#" class="section-navigation__link">Инструмент</a>
+        </li>
+        <li class="section-navigation__item">
+          <a href="#" class="section-navigation__link">Перфораторы</a>
+        </li>
+      </ul>
+
+      <div class="section-navigation-title">Перфораторы</div>
+
     </section>
 
-    <section class="catalog">
-      <h3 class="visually-hidden">Каталог товаров</h3>
+    <section class="container catalog">
+
+      <div class="sort-wrapper">
+
+        <h3 class="visually-hidden">Форма сортировки товаров</h3>
+
+        <div class="sort">
+
+          <div class="sort__title">Фильтр:</div>
+
+          <form class="sort__form" action="https://echo.htmlacademy.ru" method="POST">
+
+            <fieldset class="fieldset fieldset--price">
+              <legend class="fieldset__title">Цена:</legend>
+              <div class="price-slider">
+                <div class="slider-track" style="--left-value: 5000; --right-value: 30000; --min: 0; --max: 50000;">
+                </div>
+                <label class="visually-hidden" for="left-value">Минимальная цена</label>
+                <input class="price-slider-thumb price-slider-min" id="left-value" value="5000" min="0" max="50000"
+                  step="500" type="range">
+                <label class="visually-hidden" for="right-value">Максимальная цена</label>
+                <input class="price-slider-thumb price-slider-max" id="right-value" value="30000" min="0" max="50000"
+                  step="500" type="range">
+              </div>
+              <div class="price-input-wrapper">
+                <div class="price-input">
+                  <label class="price-input__label visually-hidden" for="price-input-min">Минимальная цена</label>
+                  <input class="button button--gray button--input price-input-min" value="5000" name="price-min" min="0"
+                    max="50000" step="500" type="number" id="price-input-min">
+                  <label class="price-input__label visually-hidden" for="price-input-max">Максимальная цена</label>
+                  <input class="button button--gray button--input price-input-max" value="30000" name="price-max"
+                    min="0" max="50000" step="500" type="number" id="price-input-max">
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset fieldset--manufacturer">
+              <legend class="fieldset__title">Производители:</legend>
+              <div class="fieldset__list">
+                <span class="fieldset__list-item">
+                  <label class="checkbox-label">
+                    <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
+                      value="bosch" checked>
+                    <span class="checkbox-indicator"></span>
+                    Bosch
+                  </label>
+                </span>
+                <span class="fieldset__list-item">
+                  <label class="checkbox-label">
+                    <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
+                      value="interskol">
+                    <span class="checkbox-indicator"></span>
+                    Интерскол
+                  </label>
+                </span>
+                <span class="fieldset__list-item">
+                  <label class="checkbox-label">
+                    <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
+                      value="makita" checked>
+                    <span class="checkbox-indicator"></span>
+                    Makita
+                  </label>
+                </span>
+                <span class="fieldset__list-item">
+                  <label class="checkbox-label">
+                    <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
+                      value="dewalt">
+                    <span class="checkbox-indicator"></span>
+                    Dewalt
+                  </label>
+                </span>
+                <span class="fieldset__list-item">
+                  <label class="checkbox-label">
+                    <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
+                      value="hitachi">
+                    <span class="checkbox-indicator"></span>
+                    Hitachi
+                  </label>
+                </span>
+              </div>
+            </fieldset>
+
+            <fieldset class="fieldset fieldset--power-supply">
+              <legend class="fieldset__title">Питание:</legend>
+              <ul class="fieldset__list">
+                <li class="fieldset__list-item">
+                  <label class="radio-label">
+                    <input class="radio-input visually-hidden" name="power-supply type=" radio" value="acummulator"
+                      checked>
+                    <span class="radio-indicator"></span>
+                    Аккумуляторные
+                  </label>
+                </li>
+                <li class="fieldset__list-item">
+                  <label class="radio-label">
+                    <input class="radio-input visually-hidden" name="power-supply type=" radio" value="network">
+                    <span class="radio-indicator"></span>
+                    Сетевые
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+
+            <button class="sort__submit-btn button button--gray" type="submit">Показать</button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+      <div class="results-wrapper">
+
+        <h3 class="visually-hidden">Результат сортировки товаров</h3>
+
+        <div class="results">
+
+          <div class="results__header">
+
+            <div class="results__title">
+              <span>Сортировать:</span>
+            </div>
+
+            <div class="results__buttons">
+
+              <div class="sort-buttons">
+                <ul class="sort-buttons">
+                  <li>
+                    <input class="visually-hidden sort-by" id="sort-radio__price" type="radio" name="sort-radio"
+                      value="price" checked>
+                    <label class="sort-by" for="sort-radio__price">
+                      По цене
+                    </label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden sort-by" id="sort-radio__type" type="radio" name="sort-radio"
+                      value="type">
+                    <label class="sort-by" for="sort-radio__type">
+                      По типу
+                    </label>
+                  </li>
+                  <li>
+                    <input class="visually-hidden sort-by" id="sort-radio__name" type="radio" name="sort-radio"
+                      value="name">
+                    <label class="sort-by" for="sort-radio__name">
+                      По функционалу
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="sort-direction">
+
+                <ul class="sort-direction">
+                  <li>
+                    <label class="arrow" for="sort-radio__inc">
+                      <input class="visually-hidden arrow-input" id="sort-radio__inc" type="radio" name="sort-arrow"
+                        value="increase" checked>
+                      <span class="visually-hidden"> По возрастанию </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                        <polygon points="10,0 5,10 0,0" />
+                      </svg>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="arrow" for="sort-radio__dec">
+                      <input class="visually-hidden arrow-input" id="sort-radio__dec" type="radio" name="sort-arrow"
+                        value="decrease">
+                      <span class="visually-hidden"> По убыванию </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                        <polygon points="10,10 5,0 0,10" />
+                      </svg>
+                    </label>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="results__body">
+
+            <div class="good-card">
+              <div class="good-card__interactive">
+                <figure class="good-card__figure">
+                  <div class="good-card__hidden-buttons">
+                    <button class="good-card__button button button--green" type="button">
+                      <img class="button__image" src="svg/cart-white.svg" alt="Иконка тележки">
+                      <span class="button__text">Купить</span>
+                    </button>
+                    <button class="good-card__button button button--bookmark" type="button"> В закладки </button>
+                  </div>
+                  <figure class="good-card__figure">
+                    <img width="218" height="170" src="img/Perforator_3.png" alt="Фотография перфоратора"
+                      class="good-card__image">
+                    <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 3000</figcaption>
+                  </figure>
+              </div>
+              <div class="old-price">22500 Р.</div>
+              <div class="good-card__link-wrapper">
+                <a href="#" class="good-card__link button button--red">
+                  <span class="good-card__link-text"></span>15500 Р.</span>
+                </a>
+                <svg class="good-card__link-arrow" fill="#ee3643" xmlns="http://www.w3.org/2000/svg" height="40"
+                  width="20" version="1.0" viewBox="0 0 20 40">
+                  <polygon points="0,0 20,20 0,40" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="good-card">
+              <div class="good-card__interactive">
+                <figure class="good-card__figure">
+                  <div class="good-card__hidden-buttons">
+                    <button class="good-card__button button button--green" type="button">
+                      <img class="button__image" src="svg/cart-white.svg" alt="Иконка тележки">
+                      <span class="button__text">Купить</span>
+                    </button>
+                    <button class="good-card__button button button--bookmark" type="button"> В закладки </button>
+                  </div>
+                  <figure class="good-card__figure">
+                    <img width="218" height="170" src="img/Perforator_2.png" alt="Фотография перфоратора"
+                      class="good-card__image">
+                    <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 6000</figcaption>
+                  </figure>
+              </div>
+              <div class="old-price">30500 Р.</div>
+              <div class="good-card__link-wrapper">
+                <a href="#" class="good-card__link button button--red">
+                  <span class="good-card__link-text"></span>25500 Р.</span>
+                </a>
+                <svg class="good-card__link-arrow" fill="#ee3643" xmlns="http://www.w3.org/2000/svg" height="40"
+                  width="20" version="1.0" viewBox="0 0 20 40">
+                  <polygon points="0,0 20,20 0,40" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="good-card label-new">
+              <div class="good-card__interactive">
+                <figure class="good-card__figure">
+                  <div class="good-card__hidden-buttons">
+                    <button class="good-card__button button button--green" type="button">
+                      <img class="button__image" src="svg/cart-white.svg" alt="Иконка тележки">
+                      <span class="button__text">Купить</span>
+                    </button>
+                    <button class="good-card__button button button--bookmark" type="button"> В закладки </button>
+                  </div>
+                  <figure class="good-card__figure">
+                    <img width="218" height="170" src="img/Perforator_3.png" alt="Фотография перфоратора"
+                      class="good-card__image">
+                    <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 2000</figcaption>
+                  </figure>
+              </div>
+              <div class="good-card__link-wrapper">
+                <a href="#" class="good-card__link button button--red">
+                  <span class="good-card__link-text"></span>12500 Р.</span>
+                </a>
+                <svg class="good-card__link-arrow" fill="#ee3643" xmlns="http://www.w3.org/2000/svg" height="40"
+                  width="20" version="1.0" viewBox="0 0 20 40">
+                  <polygon points="0,0 20,20 0,40" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="good-card">
+              <div class="good-card__interactive">
+                <figure class="good-card__figure">
+                  <div class="good-card__hidden-buttons">
+                    <button class="good-card__button button button--green" type="button">
+                      <img class="button__image" src="svg/cart-white.svg" alt="Иконка тележки">
+                      <span class="button__text">Купить</span>
+                    </button>
+                    <button class="good-card__button button button--bookmark" type="button"> В закладки </button>
+                  </div>
+                  <figure class="good-card__figure">
+                    <img width="218" height="170" src="img/Perforator_3.png" alt="Фотография перфоратора"
+                      class="good-card__image">
+                    <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 3000</figcaption>
+                  </figure>
+              </div>
+              <div class="old-price">22500 Р.</div>
+              <div class="good-card__link-wrapper">
+                <a href="#" class="good-card__link button button--red">
+                  <span class="good-card__link-text"></span>15500 Р.</span>
+                </a>
+                <svg class="good-card__link-arrow" fill="#ee3643" xmlns="http://www.w3.org/2000/svg" height="40"
+                  width="20" version="1.0" viewBox="0 0 20 40">
+                  <polygon points="0,0 20,20 0,40" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="good-card label-new">
+              <div class="good-card__interactive">
+                <figure class="good-card__figure">
+                  <div class="good-card__hidden-buttons">
+                    <button class="good-card__button button button--green" type="button">
+                      <img class="button__image" src="svg/cart-white.svg" alt="Иконка тележки">
+                      <span class="button__text">Купить</span>
+                    </button>
+                    <button class="good-card__button button button--bookmark" type="button"> В закладки </button>
+                  </div>
+                  <figure class="good-card__figure">
+                    <img width="218" height="170" src="img/Perforator_2.png" alt="Фотография перфоратора"
+                      class="good-card__image">
+                    <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 6000</figcaption>
+                  </figure>
+              </div>
+              <div class="old-price">30500 Р.</div>
+              <div class="good-card__link-wrapper">
+                <a href="#" class="good-card__link button button--red">
+                  <span class="good-card__link-text"></span>25500 Р.</span>
+                </a>
+                <svg class="good-card__link-arrow" fill="#ee3643" xmlns="http://www.w3.org/2000/svg" height="40"
+                  width="20" version="1.0" viewBox="0 0 20 40">
+                  <polygon points="0,0 20,20 0,40" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="good-card">
+              <div class="good-card__interactive">
+                <figure class="good-card__figure">
+                  <div class="good-card__hidden-buttons">
+                    <button class="good-card__button button button--green" type="button">
+                      <img class="button__image" src="svg/cart-white.svg" alt="Иконка тележки">
+                      <span class="button__text">Купить</span>
+                    </button>
+                    <button class="good-card__button button button--bookmark" type="button"> В закладки </button>
+                  </div>
+                  <figure class="good-card__figure">
+                    <img width="218" height="170" src="img/Perforator_3.png" alt="Фотография перфоратора"
+                      class="good-card__image">
+                    <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 2000</figcaption>
+                  </figure>
+              </div>
+              <div class="good-card__link-wrapper">
+                <a href="#" class="good-card__link button button--red">
+                  <span class="good-card__link-text"></span>12500 Р.</span>
+                </a>
+                <svg class="good-card__link-arrow" fill="#ee3643" xmlns="http://www.w3.org/2000/svg" height="40"
+                  width="20" version="1.0" viewBox="0 0 20 40">
+                  <polygon points="0,0 20,20 0,40" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="good-card label-new">
+              <div class="good-card__interactive">
+                <figure class="good-card__figure">
+                  <div class="good-card__hidden-buttons">
+                    <button class="good-card__button button button--green" type="button">
+                      <img class="button__image" src="svg/cart-white.svg" alt="Иконка тележки">
+                      <span class="button__text">Купить</span>
+                    </button>
+                    <button class="good-card__button button button--bookmark" type="button"> В закладки </button>
+                  </div>
+                  <figure class="good-card__figure">
+                    <img width="218" height="170" src="img/Perforator_3.png" alt="Фотография перфоратора"
+                      class="good-card__image">
+                    <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 3000</figcaption>
+                  </figure>
+              </div>
+              <div class="old-price">22500 Р.</div>
+              <div class="good-card__link-wrapper">
+                <a href="#" class="good-card__link button button--red">
+                  <span class="good-card__link-text"></span>15500 Р.</span>
+                </a>
+                <svg class="good-card__link-arrow" fill="#ee3643" xmlns="http://www.w3.org/2000/svg" height="40"
+                  width="20" version="1.0" viewBox="0 0 20 40">
+                  <polygon points="0,0 20,20 0,40" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="good-card">
+              <div class="good-card__interactive">
+                <figure class="good-card__figure">
+                  <div class="good-card__hidden-buttons">
+                    <button class="good-card__button button button--green" type="button">
+                      <img class="button__image" src="svg/cart-white.svg" alt="Иконка тележки">
+                      <span class="button__text">Купить</span>
+                    </button>
+                    <button class="good-card__button button button--bookmark" type="button"> В закладки </button>
+                  </div>
+                  <figure class="good-card__figure">
+                    <img width="218" height="170" src="img/Perforator_2.png" alt="Фотография перфоратора"
+                      class="good-card__image">
+                    <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 6000</figcaption>
+                  </figure>
+              </div>
+              <div class="old-price">30500 Р.</div>
+              <div class="good-card__link-wrapper">
+                <a href="#" class="good-card__link button button--red">
+                  <span class="good-card__link-text"></span>25500 Р.</span>
+                </a>
+                <svg class="good-card__link-arrow" fill="#ee3643" xmlns="http://www.w3.org/2000/svg" height="40"
+                  width="20" version="1.0" viewBox="0 0 20 40">
+                  <polygon points="0,0 20,20 0,40" />
+                </svg>
+              </div>
+            </div>
+
+            <div class="good-card">
+              <div class="good-card__interactive">
+                <figure class="good-card__figure">
+                  <div class="good-card__hidden-buttons">
+                    <button class="good-card__button button button--green" type="button">
+                      <img class="button__image" src="svg/cart-white.svg" alt="Иконка тележки">
+                      <span class="button__text">Купить</span>
+                    </button>
+                    <button class="good-card__button button button--bookmark" type="button"> В закладки </button>
+                  </div>
+                  <figure class="good-card__figure">
+                    <img width="218" height="170" src="img/Perforator_3.png" alt="Фотография перфоратора"
+                      class="good-card__image">
+                    <figcaption class="good-card__figure-caption">Перфоратор BOSCH BFG 2000</figcaption>
+                  </figure>
+              </div>
+              <div class="good-card__link-wrapper">
+                <a href="#" class="good-card__link button button--red">
+                  <span class="good-card__link-text"></span>12500 Р.</span>
+                </a>
+                <svg class="good-card__link-arrow" fill="#ee3643" xmlns="http://www.w3.org/2000/svg" height="40"
+                  width="20" version="1.0" viewBox="0 0 20 40">
+                  <polygon points="0,0 20,20 0,40" />
+                </svg>
+              </div>
+            </div>
+          
+          </div>
+
+        </div>
+
+        <div class="results__controls">
+          <button class="results__button button button--gray button--current" type="button">1</button>
+          <button class="results__button button button--gray" type="button">2</button>
+          <button class="results__button button button--gray" type="button">3</button>
+          <button class="results__button results__button--next button button--gray" type="button">Следующая</button>
+        </div>
+
+      </div>
+
+      </div>
+
     </section>
 
     <section class="catalog-explanation">
+      
       <h3 class="visually-hidden">Описание каталога</h3>
+
+      <div class="catalog-explanation__title">Пара слов о перфораторах</div>
+
+      <div class="catalog-explanation__text"> Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель. </div>
+
     </section>
 
   </main>
