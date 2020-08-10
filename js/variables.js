@@ -11,4 +11,7 @@ window.serviceBookmarkTitleExplanation = document.querySelector('.services__book
 window.serviceRadioAll = document.querySelectorAll('.services__bookmark-input');
 
 window.writeUsClose = document.querySelector('.write-us__close');
-window.writeUsShow = document.querySelector('.contacts__button');
+window.writeUsShow = document.querySelector('.about__button');
+
+window.mapClose = document.querySelector('.map__close');
+window.mapShow = document.querySelector('.contacts__button');

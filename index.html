@@ -473,7 +473,8 @@
 
         </div>
 
-        <a href="#" class="about__button button button--red">Подробнее о компании</a>
+        <button class="about__button button button--red" type="button" data-window=".write-us">Обратная связь</button>
+
 
       </section>
 
@@ -488,7 +489,7 @@
         <img class="contacts__map" width="300" height="158" src="img/map.png"
           alt="Расположение офиса компании на карте по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
 
-        <button class="contacts__button button button--red" type="button" data-window=".write-us">Заблудились? Напишите нам!</button>
+        <button class="contacts__button button button--red" type="button" data-window=".map">Заблудились?</button>
 
       </section>
 
@@ -656,6 +657,16 @@
 
     </form>
 
+  </div>
+
+  <div class="modal map">
+    <button class="map__close" data-window=".map">
+      <div class="image-wrapper">
+        <img width="21" height="21" src="svg/close-cross.svg" alt="Иконка закрытия">
+      </div>
+    </button>
+    <img src="img/map-big.png"
+      alt="Расположение офиса компании на карте по адресу: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
   </div>
 
   <script src="js/variables.js"></script>
