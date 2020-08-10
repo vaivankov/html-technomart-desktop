@@ -14,3 +14,8 @@ writeUsShow.addEventListener("click", () => { showModal.call(writeUsShow, writeU
 
 mapClose.addEventListener("click", () => { showModal.call(mapClose, mapClose) });
 mapShow.addEventListener("click", () => { showModal.call(mapShow, mapShow) });
+
+orderClose.addEventListener("click", () => { showModal.call(orderClose, orderClose) });
+orderContinue.addEventListener("click", () => { showModal.call(orderContinue, orderContinue) });
+
+

@@ -15,3 +15,7 @@ window.writeUsShow = document.querySelector('.about__button');
 
 window.mapClose = document.querySelector('.map__close');
 window.mapShow = document.querySelector('.contacts__button');
+
+window.orderClose = document.querySelector('.order__close');
+window.orderContinue = document.querySelector('.order__button.button--white');
+window.orderShowAll = document.querySelectorAll('.good-card__link');

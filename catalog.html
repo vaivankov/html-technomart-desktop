@@ -236,7 +236,35 @@
 
   </footer>
 
+  <div class="modal order">
+
+    <div class="modal__container">
+
+      <button class="order__close" data-window=".order">
+        <div class="image-wrapper">
+          <img width="21" height="21" src="svg/close-cross.svg" alt="Иконка закрытия">
+        </div>
+      </button>
+
+      <div class="order__line">
+        <img width="64" height="64" src="svg/check-mark.svg" alt="Иконка галочки">
+        <div class="order__line-title">Товар добавлен в корзину!</div>
+      </div>
+
+    </div>
+
+    <div class="order__line order__line--buttons">
+      <button class="order__button button button--red" type="submit">Оплатить заказ</button>
+      <button class="order__button button button--white" type="submit" data-window=".order">Продолжить покупки</button>
+    </div>
+
+  </div>
+
+
   <script src="js/variables.js"></script>
+  <script src="js/func__showModal.js"></script>
+  <script src="js/func__closeModal.js"></script>
+  <!-- <script src="js/func__.js"></script> -->
   <!-- <script src="js/func__.js"></script> -->
 
 </body>
