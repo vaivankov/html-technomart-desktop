@@ -156,71 +156,69 @@
             <fieldset class="fieldset fieldset--price">
               <legend class="fieldset__title">Цена:</legend>
               <div class="price-slider">
-                <div class="slider-track" style="--left-value: 5000; --right-value: 30000; --min: 0; --max: 50000;">
+                <div class="slider-track" style="--left-value: 1000; --right-value: 30000; --min: 0; --max: 35000;">
                 </div>
                 <label class="visually-hidden" for="left-value">Минимальная цена</label>
-                <input class="price-slider-thumb price-slider-min" id="left-value" value="5000" min="0" max="50000"
+                <input class="price-slider-thumb price-slider-min" id="left-value" value="1000" min="0" max="35000"
                   step="500" type="range">
                 <label class="visually-hidden" for="right-value">Максимальная цена</label>
-                <input class="price-slider-thumb price-slider-max" id="right-value" value="30000" min="0" max="50000"
+                <input class="price-slider-thumb price-slider-max" id="right-value" value="30000" min="0" max="35000"
                   step="500" type="range">
               </div>
-              <div class="price-input-wrapper">
-                <div class="price-input">
-                  <label class="price-input__label visually-hidden" for="price-input-min">Минимальная цена</label>
-                  <input class="button button--gray button--input price-input-min" value="5000" name="price-min" min="0"
-                    max="50000" step="500" type="number" id="price-input-min">
-                  <label class="price-input__label visually-hidden" for="price-input-max">Максимальная цена</label>
-                  <input class="button button--gray button--input price-input-max" value="30000" name="price-max"
-                    min="0" max="50000" step="500" type="number" id="price-input-max">
-                </div>
+              <div class="price-input">
+                <label class="price-input__label visually-hidden" for="price-input-min">Минимальная цена</label>
+                <input class="button button--input price-input-min" value="1000" name="price-min" min="0"
+                  max="35000" step="500" type="number" id="price-input-min">
+                <label class="price-input__label visually-hidden" for="price-input-max">Максимальная цена</label>
+                <input class="button button--input price-input-max" value="30000" name="price-max" min="0"
+                  max="35000" step="500" type="number" id="price-input-max">
               </div>
             </fieldset>
 
             <fieldset class="fieldset fieldset--manufacturer">
               <legend class="fieldset__title">Производители:</legend>
-              <div class="fieldset__list">
-                <span class="fieldset__list-item">
+              <ul class="fieldset__list">
+                <li class="fieldset__list-item">
                   <label class="checkbox-label">
                     <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
                       value="bosch" checked>
                     <span class="checkbox-indicator"></span>
                     Bosch
                   </label>
-                </span>
-                <span class="fieldset__list-item">
+                </li>
+                <li class="fieldset__list-item">
                   <label class="checkbox-label">
                     <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
                       value="interskol">
                     <span class="checkbox-indicator"></span>
                     Интерскол
                   </label>
-                </span>
-                <span class="fieldset__list-item">
+                </li>
+                <li class="fieldset__list-item">
                   <label class="checkbox-label">
                     <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
                       value="makita" checked>
                     <span class="checkbox-indicator"></span>
                     Makita
                   </label>
-                </span>
-                <span class="fieldset__list-item">
+                </li>
+                <li class="fieldset__list-item">
                   <label class="checkbox-label">
                     <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
                       value="dewalt">
                     <span class="checkbox-indicator"></span>
                     Dewalt
                   </label>
-                </span>
-                <span class="fieldset__list-item">
+                </li>
+                <li class="fieldset__list-item">
                   <label class="checkbox-label">
                     <input class="checkbox-input visually-hidden" name="manufacturers-checkbox" type="checkbox"
                       value="hitachi">
                     <span class="checkbox-indicator"></span>
                     Hitachi
                   </label>
-                </span>
-              </div>
+                </li>
+              </ul>
             </fieldset>
 
             <fieldset class="fieldset fieldset--power-supply">
@@ -228,7 +226,7 @@
               <ul class="fieldset__list">
                 <li class="fieldset__list-item">
                   <label class="radio-label">
-                    <input class="radio-input visually-hidden" name="power-supply type=" radio" value="acummulator"
+                    <input class="radio-input visually-hidden" name="power-supply" type="radio" value="acummulator"
                       checked>
                     <span class="radio-indicator"></span>
                     Аккумуляторные
@@ -236,7 +234,7 @@
                 </li>
                 <li class="fieldset__list-item">
                   <label class="radio-label">
-                    <input class="radio-input visually-hidden" name="power-supply type=" radio" value="network">
+                    <input class="radio-input visually-hidden" name="power-supply" type="radio" value="network">
                     <span class="radio-indicator"></span>
                     Сетевые
                   </label>
@@ -244,7 +242,7 @@
               </ul>
             </fieldset>
 
-            <button class="sort__submit-btn button button--gray" type="submit">Показать</button>
+            <button class="sort__submit-btn button button--show" type="submit">Показать</button>
 
           </form>
 
@@ -564,7 +562,7 @@
                 </svg>
               </div>
             </div>
-          
+
           </div>
 
         </div>
@@ -583,15 +581,19 @@
     </section>
 
     <section class="catalog-explanation">
-      
+
       <h3 class="visually-hidden">Описание каталога</h3>
 
       <div class="container catalog-explanation__content">
 
         <div class="catalog-explanation__title">Пара слов о перфораторах</div>
-  
-        <div class="catalog-explanation__text"> Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель. </div>
-      
+
+        <div class="catalog-explanation__text"> Перфоратор — универсальный строительный инструмент. Предназначен для
+          сверления и долбления отверстий в кирпиче, бетоне и камне. Существуют электромеханические и пневматические
+          перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В
+          ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная
+          дрель. </div>
+
       </div>
 
     </section>
