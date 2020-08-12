@@ -37,8 +37,8 @@
           <a class="link link--bookmark" href="#">Закладки: 0</a>
         </div>
 
-        <div class="top-header__basket">
-          <a class="link link--basket" href="#">Корзина: 0</a>
+        <div class="top-header__basket top-header__basket--active">
+          <a class="link link--basket" href="#">Корзина: 10</a>
         </div>
 
         <div class="top-header__order">
@@ -294,22 +294,22 @@
 
                 <ul class="sort-direction">
                   <li>
-                    <label class="arrow" for="sort-radio__inc">
-                      <input class="visually-hidden arrow-input" id="sort-radio__inc" type="radio" name="sort-arrow"
-                        value="increase" checked>
-                      <span class="visually-hidden"> По возрастанию </span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
-                        <polygon points="10,0 5,10 0,0" />
-                      </svg>
-                    </label>
-                  </li>
-                  <li>
                     <label class="arrow" for="sort-radio__dec">
                       <input class="visually-hidden arrow-input" id="sort-radio__dec" type="radio" name="sort-arrow"
                         value="decrease">
                       <span class="visually-hidden"> По убыванию </span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                      <svg class="arrow-image" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
                         <polygon points="10,10 5,0 0,10" />
+                      </svg>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="arrow" for="sort-radio__inc">
+                      <input class="visually-hidden arrow-input" id="sort-radio__inc" type="radio" name="sort-arrow" value="increase"
+                        checked>
+                      <span class="visually-hidden"> По возрастанию </span>
+                      <svg class="arrow-image" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                        <polygon points="10,0 5,10 0,0" />
                       </svg>
                     </label>
                   </li>
@@ -568,10 +568,10 @@
         </div>
 
         <div class="results__controls">
-          <button class="results__button button button--gray button--current" type="button">1</button>
-          <button class="results__button button button--gray" type="button">2</button>
-          <button class="results__button button button--gray" type="button">3</button>
-          <button class="results__button results__button--next button button--gray" type="button">Следующая</button>
+          <button class="results__button button button--controls button--controls-current" type="button">1</button>
+          <button class="results__button button button--controls" type="button">2</button>
+          <button class="results__button button button--controls" type="button">3</button>
+          <button class="results__button results__button--next button button--controls" type="button">Следующая</button>
         </div>
 
       </div>

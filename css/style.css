@@ -277,6 +277,18 @@ img {
 	background-color: var(--color-bg-header-active);
 }
 
+.top-header__basket--active {
+	background-color: var(--color-logo-hover);
+}
+
+.top-header__basket--active:hover {
+	background-color: var(--color-logo);
+}
+
+.top-header__basket--active:active {
+	background-color: var(--color-logo-active);
+}
+
 .site-search:focus::placeholder,
 .site-search:focus {
 	color: var(--color-black);
@@ -775,7 +787,6 @@ img {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 20px;
 	height: 80px;
 
 	border-radius: 5px;
@@ -810,6 +821,7 @@ img {
 	align-items: center;
 	justify-content: space-between;
 	padding: 0 0 20px 0;
+	margin-bottom: 20px;
 	width: 220px;
 	height: 330px;
 
@@ -1834,7 +1846,7 @@ input[type="range"]::-moz-range-thumb {
 	width: 12px;
 
 	background-color: var(--color-black);
-	content: '';
+	content: "";
 }
 
 .fieldset--manufacturer,
@@ -1874,6 +1886,10 @@ input[type="range"]::-moz-range-thumb {
 	background-image: url("../svg/checkbox-on.svg");
 }
 
+.checkbox-input:disabled + .checkbox-indicator {
+	opacity: 0.1;
+}
+
 .checkbox-input:focus + .checkbox-indicator,
 .checkbox-input:hover + .checkbox-indicator {
 	opacity: 1;
@@ -1893,7 +1909,7 @@ input[type="range"]::-moz-range-thumb {
 
 .fieldset--power-supply {
 	position: relative;
-	
+
 	margin-top: 20px;
 }
 .radio-label {
@@ -1903,6 +1919,10 @@ input[type="range"]::-moz-range-thumb {
 
 .radio-input:checked + .radio-indicator {
 	background-image: url("../svg/radio-on.svg");
+}
+
+.radio-input:disabled + .radio-indicator {
+	opacity: 0.1;
 }
 
 .radio-input:focus + .radio-indicator,
@@ -1930,7 +1950,7 @@ input[type="range"]::-moz-range-thumb {
 
 .button--show {
 	color: var(--color-black);
-	
+
 	border: 1px solid var(--color-text-gray);
 	background-color: var(--color-white);
 }
@@ -1942,37 +1962,134 @@ input[type="range"]::-moz-range-thumb {
 }
 .results__header {
 	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 20px;
+	height: 35px;
+
+	border-radius: 3px;
+	font-family: "ptsans";
+	text-transform: uppercase;
+
+	background-color: var(--color-bg-gray);
 }
 .results__title {
+	display: flex;
+	align-items: center;
+	border-radius: 3px;
+
+	font-size: 14px;
 }
 .results__buttons {
 	display: flex;
+	justify-content: space-between;
+	width: 430px;
 }
 .sort-buttons {
 	display: flex;
+	flex-grow: 1;
+	justify-content: space-between;
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
 }
-.sort-by {
+
+.sort-by:focus + .sort-by {
+	box-shadow: 0 0 1px 2px var(--color-black);
 }
+
+.sort-by:not(:checked) + .sort-by {
+	font-size: 14px;
+	color: var(--color-text-gray);
+	text-decoration: underline dotted var(--color-text-red);
+}
+
+.sort-by:checked + .sort-by {
+	font-size: 14px;
+	color: var(--color-text-red);
+}
+
+.sort-by:hover:not(:checked) + .sort-by {
+	color: var(--color-black);
+
+	text-decoration: underline var(--color-text-red);
+}
+
 .sort-direction {
 	display: flex;
+	justify-content: space-between;
+	margin: 0;
+	margin-left: 20px;
+	padding: 0;
+	width: 60px;
+
+	list-style: none;
 }
 .arrow {
 }
 .arrow-input {
 }
+
+.arrow-input:focus ~ .arrow-image {
+	box-shadow: 0 0 1px 2px var(--color-black);
+}
+
+.arrow-input ~ .arrow-image {
+	fill: var(--color-text-gray);
+}
+
+.arrow-input:hover ~ .arrow-image {
+	fill: var(--color-black);
+}
+
+.arrow-input:checked ~ .arrow-image {
+	fill: var(--color-text-red);
+}
+
 .results__body {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
+	margin-top: 20px;
+	margin-bottom: 40px;
 }
 .results__controls {
 	display: flex;
+	margin-bottom: 60px;
 }
 .results__button {
+	width: 40px;
+	height: 40px;
+	margin-right: 10px;
 }
-.button--current {
+.button--controls {
+	color: var(--color-black);
+	
+	border: 1px solid var(--color-bg-gray);
+	
+	background-color: transparent;
+}
+.button--controls:not(.button--controls-current):hover {
+	border: 1px solid var(--color-text-gray);
+	background-color: transparent;
+}
+.button--controls:not(.button--controls-current):active {
+	border: 1	px solid var(--color-text-red);
+	background-color: transparent;
+}
+.button--controls-current {
+	color: var(--color-white);
+	
+	background-color: var(--color-text-red);
+}
+.button--controls-current:hover {
+	color: var(--color-white);
+	
+	background-color: var(--color-text-red);
 }
 .results__button--next {
+	width: 130px;
 }
 
 .catalog-explanation {
