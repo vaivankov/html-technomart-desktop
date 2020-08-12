@@ -19,3 +19,10 @@ window.mapShow = document.querySelector('.contacts__button');
 window.orderClose = document.querySelector('.order__close');
 window.orderContinue = document.querySelector('.order__button.button--white');
 window.orderShowAll = document.querySelectorAll('.good-card__link');
+
+window.sliderThumbs = document.querySelectorAll(".price-slider-thumb");
+
+window.inputPriceMin = document.querySelector(".price-input-min");
+window.inputPriceMax = document.querySelector(".price-input-max");
+window.sliderPriceMin = document.querySelector(".price-slider-min");
+window.sliderPriceMax = document.querySelector(".price-slider-max");
