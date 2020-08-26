@@ -2092,8 +2092,6 @@ img {
   margin-top: 10px;
 }
 
-
-
 .sort {
   width: 220px;
 
@@ -2155,13 +2153,13 @@ img {
 
 .price-slider-thumb {
   position: absolute;
+  z-index: 3;
 
   width: 80%;
 }
 
 .slider-track {
   position: absolute;
-  top: 50%;
   z-index: 2;
 
   width: 80%;
@@ -2174,7 +2172,6 @@ img {
 .slider-track::after {
   content: "";
   position: absolute;
-  z-index: 4;
 
   height: 2px;
 
@@ -2247,6 +2244,7 @@ input[type="range"]::-webkit-slider-thumb {
   width: 20px;
   height: 23px;
 
+  background-color: transparent;
   background-image: url("../svg//filter-button.svg");
   border: none;
   border-radius: 0;
@@ -2263,6 +2261,7 @@ input[type="range"]::-moz-range-thumb {
   width: 20px;
   height: 23px;
 
+  background-color: transparent;
   background-image: url("../svg//filter-button.svg");
   border: none;
   border-radius: 0;
@@ -2429,8 +2428,6 @@ input[type="range"]::-moz-range-thumb {
   border: 1px solid var(--color-text-gray);
 }
 
-
-
 .results {
   width: 700px;
 }
@@ -2531,10 +2528,6 @@ input[type="range"]::-moz-range-thumb {
 
   list-style: none;
 }
-
-
-
-
 
 .arrow-input:focus ~ .arrow-image {
   -webkit-box-shadow: 0 0 1px 2px var(--color-black);
